@@ -1,3 +1,7 @@
+import numpy as np
+import tensorflow as tf
+from keras.layers import Layer
+
 class PositionalEncoding(Layer):
     def __init__(self, sequence_length, d_model, **kwargs):
         super(PositionalEncoding, self).__init__(**kwargs)
