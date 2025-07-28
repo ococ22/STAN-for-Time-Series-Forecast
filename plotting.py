@@ -1,5 +1,14 @@
-# Plotting functions (unchanged)
+import numpy as np
+import matplotlib.pyplot as plt
+
 def plot_loss(history, run_number):
+    """
+    Plot training and validation loss (MAE) over epochs.
+
+    Args:
+        history: Keras History object returned by model.fit().
+        run_number: Integer or string identifier for the run.
+    """
     plt.figure(figsize=(10, 6))
     plt.plot(history.history['loss'], label='Training Loss (MAE)')
     plt.plot(history.history['val_loss'], label='Validation Loss (MAE)')
@@ -16,6 +25,14 @@ def plot_loss(history, run_number):
     plt.close()
 
 def plot_actual_vs_predicted(test_y, yhat, run_number):
+    """
+    Plot actual vs predicted Active Power for the first timestep of each sample.
+
+    Args:
+        test_y: Ground truth values, shape (samples, output_length).
+        yhat: Predicted values, same shape as test_y.
+        run_number: Integer or string identifier for the run.
+    """
     plt.figure(figsize=(10, 6))
     time_steps = np.arange(test_y.shape[0])
     plt.plot(time_steps, test_y[:, 0], label='Actual Active Power', color='blue')
