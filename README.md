@@ -1,6 +1,6 @@
 # STAN Time Series Forecasting Model
 
-This repository contains a TensorFlow/Keras implementation of the STAN model for multivariate time series forecasting. It incorporates custom layers and MLP-based decoder architecture to predict future values of active power with seasonal decomposition.
+This repository contains a TensorFlow/Keras implementation of the Seasonality-Trend Aware Network (STAN) model for multivariate time series forecasting. It incorporates custom layers and MLP-based decoder architecture to predict future values of active power with seasonal decomposition.
 
 ---
 
