@@ -1,3 +1,6 @@
+import tensorflow as tf
+from keras.layers import Layer
+
 class ReshapeLayer(Layer):
     def __init__(self, target_shape, **kwargs):
         super(ReshapeLayer, self).__init__(**kwargs)
