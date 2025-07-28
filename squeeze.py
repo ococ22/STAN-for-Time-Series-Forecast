@@ -1,3 +1,6 @@
+import tensorflow as tf
+from keras.layers import Layer
+
 class SqueezeLayer(Layer):
     def __init__(self, axis, **kwargs):
         super(SqueezeLayer, self).__init__(**kwargs)
