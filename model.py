@@ -8,16 +8,6 @@ from keras.models import Model
 from keras.layers import Input, Dense, Flatten, Layer, Concatenate
 from keras.optimizers import Adam
 
-import numpy as np
-import tensorflow as tf
-from keras.models import Model
-from keras.layers import Input, Dense, Flatten, Concatenate
-from keras.optimizers import Adam
-
-from positional_encoding import PositionalEncoding
-from reshape_layer import ReshapeLayer
-from squeeze_layer import SqueezeLayer
-
 def build_stan_model(time_steps, n_features, fc_neurons, drop_out, output_length, learning_rate):
     # Encoder input
     x = Input(shape=(time_steps, n_features + 2), name='encoder_input')
